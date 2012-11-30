@@ -8,16 +8,21 @@ A small function that will pass a date ('YYYY-mm-dd') and providing that date fa
 Usage
 -----
 In PHP just call:
-'$var = ox_term_date("2014-04-28")'
+
+```
+$var = ox_term_date("2014-04-28")
+```
 
 and $var will contain:
 
-'array(
+```
+array(
 	"lookupDate" = "2014-04-28",
 	"termStartDate" = "2014-04-27",
 	"termEndDate" = "2014-06-21",
 	"termName" = "Trinity"
-)'
+)
+```
 
 Date Information
 ----------------
