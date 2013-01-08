@@ -32,9 +32,9 @@ function ox_term_date($compareDate = NULL) {
 	$term[] = array("name" => "Trinity", "startDate" => "2013-04-21", "endDate" => "2013-06-15");
 	$term[] = array("name" => "Trinity", "startDate" => "2014-04-27", "endDate" => "2014-06-21");
 	
-	echo "<pre>";
+	//echo "<pre>";
 	//print_r($term);
-	echo "</pre>";
+	//echo "</pre>";
 	
 	foreach($term AS $uTerm) {
 		if ($uTerm['startDate'] <= $compareDate) {
@@ -42,6 +42,28 @@ function ox_term_date($compareDate = NULL) {
 				$calculatedStartTerm = $uTerm['startDate'];
 				$calculatedEndTerm = $uTerm['endDate'];
 				$calculatedTermName = $uTerm['name'];
+				
+				$daysDiff = floor(strtotime($compareDate)/(60*60*24)) - floor(strtotime(date('Y-m-d'))/(60*60*24));
+				
+				if ($daysDiff < 7) {
+					$calculatedWeekName = "0th Week";
+				} elseif ($daysDiff < 14) {
+					$calculatedWeekName = "1st Week";
+				} elseif ($daysDiff < 21) {
+					$calculatedWeekName = "2nd Week";
+				} elseif ($daysDiff < 28) {
+					$calculatedWeekName = "3rd Week";
+				} elseif ($daysDiff < 35) {
+					$calculatedWeekName = "4th Week";
+				} elseif ($daysDiff < 42) {
+					$calculatedWeekName = "5th Week";
+				} elseif ($daysDiff < 49) {
+					$calculatedWeekName = "6th Week";
+				} elseif ($daysDiff < 56) {
+					$calculatedWeekName = "7th Week";
+				} elseif ($daysDiff < 63) {
+					$calculatedWeekName = "8th Week";
+				}
 				
 				goto foundTermName;
 			}
@@ -51,16 +73,16 @@ function ox_term_date($compareDate = NULL) {
 	$calculatedStartTerm = "";
 	$calculatedEndTerm = "";
 	$calculatedTermName = "Unknown";
-
+	$calculatedWeekName = "Unknown";
 
 	foundTermName:
 	
-	$returnArray = array("lookupDate" => $compareDate, "termStartDate" => $calculatedStartTerm, "termEndDate" => $calculatedEndTerm, "termName" => $calculatedTermName);
+	$returnArray = array("lookupDate" => $compareDate, "termStartDate" => $calculatedStartTerm, "termEndDate" => $calculatedEndTerm, "termName" => $calculatedTermName, "weekName" => $calculatedWeekName);
 	
 	return $returnArray;
 }
 
 echo "<pre>";
-print_r(ox_term_date("2014-04-28"));
+print_r(ox_term_date("2013-01-16"));
 echo "</pre>";
 ?>
