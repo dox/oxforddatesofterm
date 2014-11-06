@@ -12,11 +12,7 @@ In PHP just call:
 ```
 $var = ox_term_date("2014-04-28")
 ```
-$foundTerm['term_name'] = $date[2];
-			$foundTerm['week_num'] = $weekNum;
-			$foundTerm['week_name'] = $weekNum . $abbreviation;
-			$foundTerm['term_start'] = $date[0];
-			$foundTerm['term_end'] = $date[1];
+
 and $var will contain:
 
 ```
