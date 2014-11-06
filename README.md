@@ -12,15 +12,20 @@ In PHP just call:
 ```
 $var = ox_term_date("2014-04-28")
 ```
-
+$foundTerm['term_name'] = $date[2];
+			$foundTerm['week_num'] = $weekNum;
+			$foundTerm['week_name'] = $weekNum . $abbreviation;
+			$foundTerm['term_start'] = $date[0];
+			$foundTerm['term_end'] = $date[1];
 and $var will contain:
 
 ```
 array(
-	"lookupDate" = "2014-04-28",
-	"termStartDate" = "2014-04-27",
-	"termEndDate" = "2014-06-21",
-	"termName" = "Trinity"
+	"term_name" = "Trinity",
+	"week_num" = "1",
+	"week_name" = "1st",
+	"term_start" = "2014-04-27",
+	"term_end" = "2014-06-21"
 )
 ```
 
@@ -32,5 +37,4 @@ Dates taken from http://www.ox.ac.uk/about_the_university/university_year/dates_
 Author
 ------
 Made by Andrew Breakspear @ St Edmund Hall
-Feel free to use this in anyway you want, with or without credit
- 
+Feel free to use this in anyway you want - but I'd love to hear about it!
