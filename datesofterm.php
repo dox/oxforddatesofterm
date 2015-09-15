@@ -60,7 +60,7 @@ function ox_term_date($compareDate = NULL) {
 	}
 	
 	if ($foundTerm['term_name'] == NULL) {
-		$foundTerm['term_name'] = "Holiday";
+		$foundTerm['term_name'] = "Vacation";
 	}
 	
 	return $foundTerm;
