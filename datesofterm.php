@@ -38,6 +38,12 @@ function ox_term_date($compareDate = NULL) {
 	$term[] = array("2015-10-11","2015-12-05","Michaelmas");
 	$term[] = array("2016-01-17","2016-03-12","Hilary");
 	$term[] = array("2016-04-24","2016-06-18","Trinity");
+	$term[] = array("2016-10-09","2016-12-03","Michaelmas");
+	$term[] = array("2017-01-15","2017-03-11","Hilary");
+	$term[] = array("2017-04-23","2017-06-17","Trinity");
+	$term[] = array("2017-10-08","2017-12-02","Michaelmas");
+	$term[] = array("2018-01-14","2018-03-10","Hilary");
+	$term[] = array("2018-04-22","2019-06-16","Trinity");
 	
 	foreach($term AS $date) {
 		if (check_in_range($date[0], $date[1], $compareDate)) {
