@@ -1,7 +1,7 @@
 <?php
 /*
  * Oxford Dates of Term
- * Version 2017-10
+ * Version 2014-01
  *
  * A small function that will pass a date ('YYYY-mm-dd') and
  * providing that date falls within an Oxford term, it will 
@@ -61,7 +61,27 @@ function ox_term_date($compareDate = NULL) {
 	//2018-2019
 	$term[] = array("2018-10-07","2018-12-01","Michaelmas");
 	$term[] = array("2019-01-13","2019-03-09","Hilary");
-	$term[] = array("2019-04-28","2010-06-22","Trinity");
+	$term[] = array("2019-04-28","2019-06-22","Trinity");
+	
+	//2019-2020
+	$term[] = array("2019-10-13","2019-12-07","Michaelmas");
+	$term[] = array("2020-01-19","2020-03-14","Hilary");
+	$term[] = array("2020-04-26","2020-06-20","Trinity");
+	
+	//2020-2021
+	$term[] = array("2020-10-11","2020-12-05","Michaelmas");
+	$term[] = array("2021-01-17","2021-03-13","Hilary");
+	$term[] = array("2021-04-25","2021-06-19","Trinity");
+	
+	//2021-2022
+	$term[] = array("2021-10-10","2021-12-04","Michaelmas");
+	$term[] = array("2022-01-16","2022-03-12","Hilary");
+	$term[] = array("2022-04-24","2022-06-18","Trinity");
+	
+	//2022-2023
+	$term[] = array("2022-10-09","2022-12-03","Michaelmas");
+	$term[] = array("2023-01-15","2023-03-11","Hilary");
+	$term[] = array("2023-04-23","2023-06-17","Trinity");
 	
 	foreach($term AS $date) {
 		if (check_in_range($date[0], $date[1], $compareDate)) {
